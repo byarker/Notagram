@@ -8,7 +8,7 @@ def main(request):
   return HttpResponse(template.render())
 '''
 def main(request):
-    return scrambler(request)
+    return testing(request)
 
 def scrambler(request):
     return render(request, 'scrambler.html')
