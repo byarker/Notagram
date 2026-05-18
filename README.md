@@ -1,2 +1,2 @@
 # Notagram
-Word scrambler created for Django practise
+Word scrambler created for Django practice
