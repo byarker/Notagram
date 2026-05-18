@@ -11,9 +11,6 @@
         <label for="word">Enter text:</label> <br>
         <input type="text" id="word" name="word"> <br>
         <input type="submit" value="Scramble">
-        <input type="hidden" id="prevwords" name="prevwords">
     </form>
-    {% for n in word %}
-        <h2>{{ n }}</h2>
-    {% endfor %}
+    {% include "histoy.html" with outputs=outputs %}
 {% endblock %}
