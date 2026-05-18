@@ -1,16 +1,19 @@
-{% extends ".master.html" %}
+{% extends "testtemplate.html" %}
 
 {% block title %}
-    Notagram scrambler
+    Test
 {% endblock %}
 
 {% block content %}
-    <h1>Notagram</h1>
-    <form action="scrambler.html" method="post">
+    <h1>Test page</h1>
+    <form method="post">
         {%  csrf_token %}
         <label for="word">Enter text:</label> <br>
         <input type="text" id="word" name="word"> <br>
         <input type="submit" value="Scramble">
+        <input type="hidden" id="prevwords" name="prevwords">
     </form>
-    <h2></h2>
+    {% for n in word %}
+        <h2>{{ n }}</h2>
+    {% endfor %}
 {% endblock %}
