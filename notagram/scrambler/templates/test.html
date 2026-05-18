@@ -1,13 +1,16 @@
-{% extends "testtemplate.html" %}
+{% extends ".master.html" %}
 
 {% block title %}
-  Test page
+    Notagram scrambler
 {% endblock %}
 
 {% block content %}
-    {% for x in fruits %}
-        <h1>{{ x }}</h1>
-    {% endfor %}
-
-    <p>In views.py you can see what the fruits variable looks like.</p>
+    <h1>Notagram</h1>
+    <form action="scrambler.html" method="post">
+        {%  csrf_token %}
+        <label for="word">Enter text:</label> <br>
+        <input type="text" id="word" name="word"> <br>
+        <input type="submit" value="Scramble">
+    </form>
+    <h2></h2>
 {% endblock %}

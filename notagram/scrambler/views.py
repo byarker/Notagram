@@ -14,8 +14,4 @@ def scrambler(request):
     return render(request, 'scrambler.html')
 
 def testing(request):
-  template = loader.get_template('test.html')
-  context = {
-    'fruits': ['Apple', 'Banana', 'Cherry'],
-  }
-  return HttpResponse(template.render(context, request))
+  return render(request, 'test.html')
